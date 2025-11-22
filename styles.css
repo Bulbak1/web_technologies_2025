@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('images/cursor_rad.png'), auto;
+}
+
+a, button {
+    cursor: url('images/Hand1.png'), pointer;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #2d2d2d;
+    color: #e0e0ce;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #8a6d3b;
+}
+
+h1 {
+    color: #c8a97e;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+nav {
+    padding: 10px;
+}
+
+nav a {
+    color: #e0e0ce;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #8a6d3b;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #3a3a3a;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #c8a97e;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+ul li::before {
+    content: "☢";
+    margin-right: 10px;
+    color: #8a6d3b;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #8a6d3b;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #1a1a1a;
+    color: #c8a97e;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+footer a {
+    color: #8a6d3b;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#about > img {
+     height: 350px;
+}
+
+/* 2 лаб */
+
+/* Стили для активной ссылки в навигации */
+#active {
+    color: tomato;
+}
+
+/* Делаем навигацию флекс-контейнером */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Прижимаем футер к низу */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+/* Адаптивность для главной страницы */
+
+/* Для ширины ≤800px */
+@media (max-width: 800px) {
+    #about img {
+        width: 500px;
+        margin: 15px auto;
+        display: block;
+    }
+    
+    nav {
+        justify-content: space-between;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+}
+
+/* Для ширины ≤600px */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    nav a {
+        font-size: calc(1.2rem + 4px);
+    }
+    
+    #about img {
+        width: 100%;
+    }
+    
+    table {
+        font-size: calc(1rem - 2px);
+    }
+}
+
+/* Для ширины ≤400px */
+@media (max-width: 400px) {
+    table {
+        font-size: calc(1rem - 4px);
+    }
+    
+    th, td {
+        padding: 8px;
+    }
+}
